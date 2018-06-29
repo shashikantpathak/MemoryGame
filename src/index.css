@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif");
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    color: red;
+}
+
+body {
+    font-family: 'Bree Serif', serif;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

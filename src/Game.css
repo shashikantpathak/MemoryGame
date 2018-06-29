@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif");
+.Game {
+    text-align: center;
+}
+
+.Game-header {
+    height: 50px;
+    padding: 20px;
+    color: rgb(151, 22, 22);
+}
+
+.Game-title {
+    font-size: 2em;
+    color: cyan;
+    padding: 3px;
+}
+
+.Game-status {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: floralwhite;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.Game-complete {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: floralwhite;
+    font-weight: bold;
+}
+
+.Game-intro {
+    font-size: large;
+}
+
+.Card {
+    display: inline-block;
+    border-color: peru;
+    border-width: 5px;
+    border-style: solid;
+    height: 7.1rem;
+    width: 7.1rem;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background: rgb(151, 15, 15);
+    /* font-size: 0; */
+    color: #991d38;
+    border-radius: 50%;
+    cursor: pointer;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.Matched {
+    border-color: brown;
+    cursor: default;
+    background: rgb(23, 160, 64);
+    font-size: 33px;
+    animation-name: rubberBand;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+}
+
+.ImageContainer {
+    display: inline-block;
+    max-width: 750px;
+    margin: '20px auto';
+    box-sizing: content-box;
+    background-color: burlywood;
+    border-radius: 100px;
+    border-bottom-style: double;
+    border-top-style: double;
+    border-right-style: double;
+    border-left-style: double;
+    background-color: white;
+    /* background-image: url(https://vignette.wikia.nocookie.net/payday/images/c/cd/Optical_Gif.gif); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: blue;
+    padding: 8px;
+}
+
+.reset {
+    background-color: rgba(8, 33, 100, 0.746);
+    padding: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    border-style: ridge;
+    padding-right: 15px;
+    font-family: monospace;
+    font-weight: 800;
+    color: darkorange
+}
