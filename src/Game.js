@@ -112,7 +112,6 @@ class Game extends Component {
       gameStatus = <div className='Game-complete'>
                     <div>GAME COMPLETE!&nbsp;&nbsp;&nbsp;&nbsp;</div>
                     <div>You used {this.state.moves-1} moves &nbsp;&nbsp;&nbsp;&nbsp;</div>
-                    <div>Rating:{} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                     <div><button onClick={this.Restart}>Try again</button></div>
                    </div>;      
     }
