@@ -7,15 +7,16 @@ import 'font-awesome/css/font-awesome.min.css';
 class Game extends Component {
   constructor(props) {
     super(props);
+//     bind all the methods
     this.onImageClicked = this.onImageClicked.bind(this);
     this.Restart = this.Restart.bind(this);
     this.memoryOfImage= new MemoryOfImage();
-  }
-
+//   }
+// start the game
   componentWillMount() {
     this.startGame();
   }
-
+// set the initial state before the game run
   startGame() {
     this.memoryOfImage.generateImageSet();
     this.setState({
@@ -27,7 +28,7 @@ class Game extends Component {
       count:0
     });
   }
-
+// set the state for images
   getImageViews() {
     let ImageViews = [];
     let onClick = this.onImageClicked;
@@ -42,7 +43,7 @@ class Game extends Component {
     });
     return ImageViews;
   }
-
+// if image doesn't match, reset it to initial
   ResetImageArray(id1,id2) {
     if (this.state.numberofClick !== 2) {
       return;
@@ -56,7 +57,7 @@ class Game extends Component {
       moves : this.state.moves+1
     });
   }
-
+// count the matches ,clicks, images matched or not 
   onImageClicked(id,image) {
     if (this.state.numberofClick === 0 || this.state.numberofClick === 2) {
       if (this.state.numberofClick === 2) {
@@ -94,7 +95,7 @@ class Game extends Component {
 
     }
   }
-
+// restart the game
   Restart() {
     this.startGame();
   }
@@ -107,7 +108,7 @@ class Game extends Component {
                       <div >Match found: {this.state.pairsMatched}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                       <div class="reset" onClick={this.Restart}>Restart<i className="fab fa-creative-commons-sa"></i></div>
                     </div>;
-
+// once all image pair is found, display the message
     if (this.state.pairsMatched === this.memoryOfImage.total_Images) {
       gameStatus = <div className='Game-complete'>
                     <div>GAME COMPLETE!&nbsp;&nbsp;&nbsp;&nbsp;</div>
