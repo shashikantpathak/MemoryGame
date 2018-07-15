@@ -5,7 +5,7 @@ class MemoryOfImage {
     this.arrayOfImages = [];
     this.total_Images = 10;
   }
-
+// store the images 
   generateImageSet() {
    
     this.arrayOfImages = [];
@@ -28,9 +28,10 @@ class MemoryOfImage {
       this.arrayOfImages.push(image2);
       id++;
     }
+//     shuffle the images on start of game
     shuffle(this.arrayOfImages);  
   }
-
+// get the id of particular image on click
   getImage(id) {
     for(let i=0; i < 2*this.total_Images; i++) {
       if (this.arrayOfImages[i].id === id) {
@@ -42,7 +43,7 @@ class MemoryOfImage {
   flipCard(id, flipped) {
     this.getImage(id).flipped = flipped;
   }
-
+// check if image pair is found
   setImageAsMatched(id, matched) {
     this.getImage(id).matched = matched;
   }
