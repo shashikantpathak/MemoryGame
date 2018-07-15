@@ -6,7 +6,7 @@ class ImageView extends Component {
     super(props);
     this.onClick = this.onClick.bind(this);
   }
-
+// check the match on click and flipped 
   onClick() {
     if (!this.props.matched && !this.props.flipped) {
       this.props.onClick(this.props.id,this.props.image);      
@@ -14,6 +14,7 @@ class ImageView extends Component {
   }
 
   render() {
+//     define the path of images store
     let imagePath = './images/';
     if (this.props.flipped) {
       imagePath = imagePath + this.props.image + '.gif';
